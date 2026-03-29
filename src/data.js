@@ -21,7 +21,8 @@ export const PORTFOLIO_DATA = {
   skills: [
     { category: "Languages", items: ["JavaScript", "Python", "Java", "C++", "TypeScript"] },
     { category: "Web Technologies", items: ["React", "HTML5", "CSS3", "Node.js", "Express", "Tailwind CSS"] },
-    { category: "Tools & Databases", items: ["Git & GitHub", "MongoDB", "SQL", "Docker", "VS Code"] }
+    { category: "Tools & Databases", items: ["Git", "MongoDB", "SQL", "Docker", "VS Code"] },
+    { category: "Machine Learning", items: ["TensorFlow", "PyTorch", "Pandas", "Scikit-Learn"] }
   ],
 
   // 4. Projects Showcase
@@ -39,6 +40,28 @@ export const PORTFOLIO_DATA = {
       techStack: ["HTML", "CSS", "JavaScript"],
       liveLink: "#",
       repoLink: "#"
+    }
+  ],
+
+  // 5. Certifications & Achievements
+  certificates: [
+    {
+      title: "Advanced React Patterns",
+      issuer: "Frontend Masters",
+      date: "2024",
+      link: "#"
+    },
+    {
+      title: "AWS Certified Cloud Practitioner",
+      issuer: "Amazon Web Services",
+      date: "2023",
+      link: "#"
+    },
+    {
+      title: "Full Stack Web Development",
+      issuer: "Coursera",
+      date: "2023",
+      link: "#"
     }
   ]
 };

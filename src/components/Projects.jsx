@@ -1,41 +1,59 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { PORTFOLIO_DATA } from '../data';
 
 const Projects = () => {
   const { projects } = PORTFOLIO_DATA;
 
-  return (
-    <section className="section container animate-fade-in animate-delay-3">
-      <div className="text-center mb-8">
-        <h2>Projects Showcase</h2>
-        <p style={{ margin: '0 auto' }}>Some things I've built</p>
-      </div>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+  };
 
-      <div className="grid grid-cols-2 gap-6">
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.9, y: 30 },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { type: "spring", bounce: 0.3 } }
+  };
+
+  return (
+    <section className="section container">
+      <motion.div 
+        className="text-center mb-8"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-gradient">Featured Projects</h2>
+        <p style={{ margin: '0 auto' }}>Building the future, one commit at a time</p>
+      </motion.div>
+
+      <motion.div 
+        className="grid grid-cols-2 gap-6"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
         {projects.map((project, index) => (
-          <div key={index} className="glass-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-            <h3 className="mb-2">{project.title}</h3>
-            <p className="mb-4" style={{ fontSize: '1rem', flexGrow: 1 }}>{project.description}</p>
+          <motion.div 
+            key={index} 
+            variants={itemVariants}
+            className="glass-card flex"
+            style={{ flexDirection: 'column', height: '100%' }}
+          >
+            <h3 className="mb-2" style={{ color: 'var(--text-primary)' }}>{project.title}</h3>
+            <p className="mb-4" style={{ fontSize: '1.05rem', flexGrow: 1 }}>{project.description}</p>
             
-            <div className="tag-container mb-8">
+            <div className="tag-container" style={{ marginTop: 'auto' }}>
               {project.techStack.map((tech, id) => (
-                <span key={id} className="tag" style={{ background: 'transparent', borderColor: 'var(--text-secondary)', color: 'var(--text-secondary)' }}>
+                <span key={id} className="tag" style={{ background: 'transparent', borderColor: 'rgba(0,0,0,0.1)', color: 'var(--text-secondary)' }}>
                   {tech}
                 </span>
               ))}
             </div>
-            
-            <div className="flex gap-4" style={{ marginTop: 'auto' }}>
-              <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ flex: 1 }}>
-                Live Demo
-              </a>
-              <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ flex: 1 }}>
-                Source Code
-              </a>
-            </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
