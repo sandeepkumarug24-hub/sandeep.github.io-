@@ -75,7 +75,7 @@ const Hero = () => {
       >
         <div className="crazy-border"></div>
         <img 
-          src="/profile.jpg" 
+          src="./profile.jpg" 
           alt="Profile" 
           className="profile-img" 
           style={{ position: 'relative', zIndex: 10 }}
