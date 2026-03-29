@@ -11,10 +11,10 @@ export const PORTFOLIO_DATA = {
 
   // 2. Study Accounts & Profiles
   studyAccounts: [
-    { platform: "GitHub", url: "https://github.com/your-username", icon: "github" },
-    { platform: "LinkedIn", url: "https://linkedin.com/in/your-profile", icon: "linkedin" },
-    { platform: "LeetCode", url: "https://leetcode.com/your-username", icon: "leetcode" },
-    { platform: "Codeforces", url: "https://codeforces.com/profile/your-username", icon: "codeforces" }
+    { platform: "GitHub", url: "https://github.com/sandeepkumarug24-hub", icon: "github" },
+    { platform: "LinkedIn", url: "https://www.linkedin.com/in/sandeep-kumar-296715363/", icon: "linkedin" },
+    { platform: "LeetCode", url: "https://leetcode.com/u/sandeeppp_55/", icon: "leetcode" },
+    
   ],
 
   // 3. Technical Skills
@@ -35,8 +35,8 @@ export const PORTFOLIO_DATA = {
       repoLink: "#"
     },
     {
-      title: "Configuration Converter Tool",
-      description: "A utility web app to convert configuration files between different formats easily.",
+      title: "Diabetes prediction ",
+      description: "A machine learning nodel which predicts chances of you being diabetic.",
       techStack: ["HTML", "CSS", "JavaScript"],
       liveLink: "#",
       repoLink: "#"
@@ -46,22 +46,11 @@ export const PORTFOLIO_DATA = {
   // 5. Certifications & Achievements
   certificates: [
     {
-      title: "Advanced React Patterns",
-      issuer: "Frontend Masters",
-      date: "2024",
-      link: "#"
-    },
-    {
-      title: "AWS Certified Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      link: "#"
-    },
-    {
-      title: "Full Stack Web Development",
-      issuer: "Coursera",
-      date: "2023",
-      link: "#"
+      title: "Building LLM models using Prompt engineering",
+      issuer: "NVIDIA",
+      date: "march 2026",
+      link: "https://drive.google.com/file/d/1GlmFXY8BmPX-iNphzr2bTpFejjNJdy6Q/view?usp=drive_link"
     }
+    
   ]
 };
