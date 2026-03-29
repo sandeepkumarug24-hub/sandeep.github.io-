@@ -6,7 +6,7 @@ export const PORTFOLIO_DATA = {
     bio: "Welcome to my digital space. I build web applications, solve algorithms, and continuously explore new technologies. This space serves as an archive of my skills, projects, and study accounts.",
     resumeLink: "#", // Add your Google Drive / Dropbox link here
     contactText: "Get In Touch",
-    contactEmail: "mailto:youremail@example.com"
+    contactEmail: "mailto:ksandeep17365@gmail.com"
   },
 
   // 2. Study Accounts & Profiles
